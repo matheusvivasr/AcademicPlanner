@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "clasp": "scripts/setup-clasp.sh",
-    "prepare": "npm run clasp; husky install; scripts/init-submodules.sh",
+    "clasp": "setup-clasp.sh",
+    "prepare": "npm run clasp ; husky install ; init-submodules.sh",
     "rollup": "rollup --config .rollup.js",
     "build": "mkdir -p .build && cp -r src/* .build && npm run rollup",
     "format": "eslint . --fix --quiet; prettier --write .",
