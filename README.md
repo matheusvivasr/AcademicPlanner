@@ -18,5 +18,6 @@ Este repositório conta com:
   * Pode ser usado a partir de `sa-sel/gas-config-boilerplate`
 - Template da planilha[^1] que deu origem ao projeto
 [^1]: e.g.: Link ainda a ser disponibilizado
-- Documentação da planilha
-  * O que inclui tanto um tutorial quanto as funcionalidades de cada parte do script caso precise usar algo parecido.
+- Documentação da planilha:
+  * Tutorial 
+  * Funcionalidades do script
