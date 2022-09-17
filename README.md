@@ -4,7 +4,6 @@
 
 1. [Resumo](#resumo)
 2. [Ambiente](#ambiente)
-    1. [Environment Variables](#environment-variables)
 
 ## <a id="resumo"></a> Resumo
 
