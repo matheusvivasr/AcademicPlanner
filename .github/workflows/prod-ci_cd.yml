@@ -45,13 +45,13 @@ jobs:
       - name: 📂 Login to Clasp
         uses: namaggarwal/clasp-token-action@v0.0.1
         with:
-          client-id: '1072944905499-vm2v2i5dvn0a0d2o4ca36i1vge8cvbn0.apps.googleusercontent.com'
-          client-secret: 'v6V3fKV_zWU7iw1DrpO1rknX'
-          refresh-token: 'eyJhbGciOiJSUzI1NiIsImtpZCI6ImNhYWJmNjkwODE5MTYxNmE5MDhhMTM4OTIyMGE5NzViM2MwZmJjYTEiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIxMDcyOTQ0OTA1NDk5LXZtMnYyaTVkdm4wYTBkMm80Y2EzNmkxdmdlOGN2Ym4wLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiYXVkIjoiMTA3Mjk0NDkwNTQ5OS12bTJ2Mmk1ZHZuMGEwZDJvNGNhMzZpMXZnZThjdmJuMC5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsInN1YiI6IjExMzAzNjA3ODEwODk0MDU4OTM5OSIsImhkIjoidXNwLmJyIiwiZW1haWwiOiJ2aXZhcy5tYXRoZXVzQHVzcC5iciIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJhdF9oYXNoIjoiV2tiQXYxN05hS3laTV9zUUQ2OEtZQSIsImlhdCI6MTY2MzM4Mzg1NCwiZXhwIjoxNjYzMzg3NDU0fQ.oNyCS26ZRo3xPUnGKGEVU0sXw7iiSQo8i216qy6-XLSGfP48us93n9zBnQpDR1sYvHfC1ayFSN_Wnk3_I_NMUPPsO8ACkbYA_kJ0rXocwuTj5Ls44gK6hv3q4mQxlJ4xHNUARRV-_dPipO-hXQjvpPa9ij56-aPi7mL00CPginzAuvNyzZrZiJXck-mr-DsHKqLBWOIG9njooYtEKdMkOdqgmF4hA4P1Ez42v1Q1uYpDhNcIWUUhDo_xBk__tHsuH21t_eh3cLz7PLCN5p_f6bwXOzQBlqWdrZ7QXvQIXfa0rFjfSBZT2THzWVOBvzFYNQ1yUdoTzDjwfps3EpLfXg'
+          client-id: ${{ secrets.GAS_CLIENT_ID }}
+          client-secret: ${{ secrets.GAS_CLIENT_SECRET }}
+          refresh-token: ${{ secrets.GAS_REFRESH_TOKEN }}
 
       - name: Deploy to Google Sheets
         env:
-          SCRIPT_ID: '1VKgOtJrLCm2DR3zCn1HsoDulkrRFNBWqgG33Fo05zkMq2lkIzWdJkJAA'
+          SCRIPT_ID: ${{ secrets.GAS_SCRIPT_ID }}
           ENV: 'GITHUB'
         run: |
           npm ci --ignore-scripts
