@@ -11,6 +11,15 @@ export const enum State {
     MaybeToGO = 'Eletivas disponíveis',
 }
 
+export const enum Unit {
+    EESC = '18',
+    IAU = '99',
+    IFSC = '76',
+    IQSC = '75',
+    ICMC = '55',
+    SLC = '90',
+}
+
 /**
  * A disciplina cadastrada no JúpterWeb:
  * `deps`: requisitos;
@@ -26,6 +35,7 @@ export interface SubjectModel {
     deps?: string[];
     semester?: number;
     status: State;
+    unit: Unit;
 }
 
 export interface SubjectUpdateStatus {
